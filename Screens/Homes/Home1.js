@@ -1,13 +1,29 @@
-import React from 'react';
-import { Text, TextInput, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { TextInput, View } from 'react-native';
+import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
+import { HomeStyle1 } from '../../Themes/Styles/Homes/HomeStyle1';
 
+export default function Home1() {
+    const [isFocused, setIsFocused] = useState(false);
 
-export default  function Home1(){
-    return(
-         <View>
-          <View><TextInput  placeholder='Search Items ...' /></View>
-          <View><Ionicons name="line-scan" size={32} color="blue" /></View>
+    return (
+        <View style={HomeStyle1.miniHeader}>
+            <View style={[HomeStyle1.searchBox, { borderColor: isFocused ? 'red' : 'gray' }]}>
+                <Feather name="search" size={24} color="black" />
+                <TextInput
+                    placeholder='Search Items ...'
+                    placeholderTextColor='gray' // Set placeholder text color
+                    style={{
+                        paddingHorizontal: 10,
+                        width: '100%',
+                    }}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                />
+            </View>
+            <View style={HomeStyle1.scanIcon}>
+                <MaterialCommunityIcons name="line-scan" size={24} color="black" />
+            </View>
         </View>
- )
+    );
 }
