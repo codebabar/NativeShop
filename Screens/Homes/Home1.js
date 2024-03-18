@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { TextInput, View, Text, ScrollView, ImageBackground, Pressable, StyleSheet } from 'react-native';
+import { TextInput, View, Text,Image, ScrollView, ImageBackground, Pressable, StyleSheet,FlatList } from 'react-native';
 import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { HomeStyle1 } from '../../Themes/Styles/Homes/HomeStyle1';
+
 
 export default function Home1() {
     
@@ -124,6 +125,7 @@ const HeaderPromotionalBanners = () => {
                 ))}
             </ScrollView>
             <Dots onPress={scrollToBanner} activeBanner={activeBanner} />
+            <Categories />
         </View>
     );
 };
@@ -154,3 +156,42 @@ const styles = StyleSheet.create({
         backgroundColor: 'red', // Change this to your desired active dot color
     },
 });
+
+
+// Show Categories 
+
+
+const Categories = () => {
+    const data = [
+        
+        { id: 1, name: 'Sneakers',image:require('../../assets/promoImages/1.png')},
+        { id: 2, name: 'Sandals' ,image:require('../../assets/promoImages/2.png') },
+        { id: 3, name: 'Boots', image:require('../../assets/promoImages/1.png') },
+        // Add more categories as needed
+    ];
+
+    const renderItem = ({ item }) => {
+        return (
+            <View  style={HomeStyle1.category}>
+                    <View  style={HomeStyle1.single_category}>
+                        <Image  style={HomeStyle1.categoryimage} source={item.image} />       
+                     </View>
+                    <Text style={{fontSize:12}}>{item.name}</Text>
+            </View>
+           
+        );
+    };
+
+    return (
+        <View style={HomeStyle1.categoriesContainer}>
+            <FlatList
+                data={data}
+                renderItem={renderItem}
+                keyExtractor={(item) => item.id.toString()}
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+            />
+        </View>
+    );
+};
+

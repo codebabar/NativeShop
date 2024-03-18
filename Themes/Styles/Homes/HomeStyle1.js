@@ -52,7 +52,41 @@ import { StyleSheet } from "react-native";
         opacity:0.6
 
         
-      }
+      },
+  //  categoriesContainer
+
+  categoriesContainer:{
+    padding:10,
+    marginTop:15,
+
+  },
+  category:{
+    textAlign:'center',
+    height:80,
+    width: 80,
+    borderRadius:45,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  single_category:{
+    height:60,
+    width: 60,
+    borderRadius:35,
+    borderWidth:1,
+    borderColor:'#111',
+    justifyContent:'center',
+    alignItems:'center'
+
+    
+  },
+  categoryimage:{
+    height:60,
+    width: 60,
+    borderRadius:30
+    
+  }
+
+
 
 
  })
