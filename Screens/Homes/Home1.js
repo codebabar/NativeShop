@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { TextInput, View, Text,Image, ScrollView, ImageBackground, Pressable, StyleSheet,FlatList } from 'react-native';
 import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { HomeStyle1 } from '../../Themes/Styles/Homes/HomeStyle1';
+import HomeSale from './HomeSale';
 
 
 export default function Home1() {
@@ -30,6 +31,10 @@ export default function Home1() {
             </View>
 
             <HeaderPromotionalBanners />
+
+
+            {/* HomeSale */}
+            <HomeSale />
         </View>
     );
 }
