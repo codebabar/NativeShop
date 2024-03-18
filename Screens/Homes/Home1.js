@@ -31,8 +31,8 @@ export default function Home1() {
             </View>
 
             <HeaderPromotionalBanners />
-
-
+           
+        
             {/* HomeSale */}
             <HomeSale />
         </View>
