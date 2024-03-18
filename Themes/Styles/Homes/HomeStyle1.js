@@ -63,27 +63,29 @@ export const HomeStyle1 = StyleSheet.create({
     fontWeight: "400",
   },
   itemContainer: {
-    width: 150,
+    width: 200,
     margin: 10,
-  
+    textAlign:'center',
     position:'relative',
     boxShadow: '0px 3px 8px rgba(0, 0, 0, 0.24)',
     paddingTop:30,
     paddingBottom:30,
-    paddingLeft:5,
-    paddingRight:5,
+    marginBottom:40,
+    paddingLeft:15,
+    borderWidth:1,
+    borderColor:'#f1f1f1',
+    paddingRight:15,
     ...Platform.select({
       ios: {
-        shadowColor: '#959DA5',
+        shadowColor: '#fff',
         shadowOffset: { width: 0, height: 8 },
         shadowOpacity: 0.2,
         shadowRadius: 24,
       },
       android: {
-        elevation: 5,
+        elevation: 1,
       },
       web: {
-     
         boxshadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
       },
     }),
@@ -96,18 +98,22 @@ export const HomeStyle1 = StyleSheet.create({
    left:2,
    marginTop:1,
    padding:5,
+   fontSize:10,
   
   },
   itemImage: {
-    height: 100,
-    width: 100,
+    height: 120,
+    width: 150,
+    marginLeft:20
   },
 
   itemName:{
     textAlign:'left',
-    paddingTop:8,
-    paddingBottom:8,
+    paddingTop:18,
+    paddingBottom:2,
     fontWeight:'500',
+    fontWeight:'bold',
+    fontSize:18,
   },
   itemPrice:{
     fontWeight:'bold',

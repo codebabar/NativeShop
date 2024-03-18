@@ -10,6 +10,7 @@ export default function Home1() {
     const [isFocused, setIsFocused] = useState(false);
 
     return (
+        <ScrollView>
         <View>
             <View style={HomeStyle1.miniHeader}>
                 <View style={HomeStyle1.searchBox}>
@@ -26,7 +27,7 @@ export default function Home1() {
                     />
                 </View>
                 <View style={HomeStyle1.scanIcon}>
-                    <MaterialCommunityIcons name="line-scan" size={24} color="black" />
+                  <Text>H</Text>
                 </View>
             </View>
 
@@ -35,7 +36,9 @@ export default function Home1() {
         
             {/* HomeSale */}
             <HomeSale />
+            
         </View>
+    </ScrollView>   
     );
 }
 

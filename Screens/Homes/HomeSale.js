@@ -36,16 +36,19 @@ export default function HomeSale() {
     // Add more data items as needed
   ];
 
-  const renderItem = ({ item }) => (
+  const RenderItem = ({ item }) => (
     <View style={HomeStyle1.itemContainer}>
-         <View style={HomeStyle1.salebadge}><Text>Sale 40% OFFF</Text></View>
+      
+         <View style={HomeStyle1.salebadge}><Text style={{fontSize:12,fontWeight:'bold'}}>40% OFF</Text></View>
       <Image source={item.pImage} style={HomeStyle1.itemImage} />
       <Text style={HomeStyle1.itemName}>{item.pname}</Text>
-      <View style={{flexDirection:'row',justifyContent:"space-between"}}>
-          <View> <Text style={HomeStyle1.itemPrice}>${item.pPrice}</Text></View>
-          <View><Pressable>
-          <AntDesign name="plussquareo" size={24} color="black" />
-            </Pressable></View>
+      <Text style={{marginBottom:15}}>⭐4.5(120)</Text>
+
+      <View style={{flexDirection:'row',justifyContent:"space-between",alignItems:"center"}}>
+          <Text style={HomeStyle1.itemPrice}>${item.pPrice}</Text>
+          
+          <Pressable><Text style={{backgroundColor:'green',color:"#fff",padding:5}}>add to cart</Text></Pressable>
+
       </View>
     </View>
   );
@@ -54,7 +57,7 @@ export default function HomeSale() {
     <>
       <View style={HomeStyle1.saleMiniHeader}>
         <View>
-          <Text style={HomeStyle1.mdHeading}>Fla🔥hSale</Text>
+          <Text style={HomeStyle1.mdHeading}>Fla🔥h  <Text style={{fontSize:14}}>Sale</Text></Text>
         </View>
         <View>
           <Pressable>
@@ -65,7 +68,7 @@ export default function HomeSale() {
 
       <ScrollView horizontal={true}  showsVerticalScrollIndicator={false} // Hide vertical scrollbar
       showsHorizontalScrollIndicator={false}>
-        <FlatList  horizontal={true} data={data} renderItem={renderItem} keyExtractor={(item) => item.id.toString()} />
+        <FlatList  horizontal={true} data={data} renderItem={RenderItem} keyExtractor={(item) => item.id.toString()} />
       </ScrollView>
     </>
   );
