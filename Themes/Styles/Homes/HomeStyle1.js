@@ -1,4 +1,6 @@
 import { StyleSheet, Platform } from "react-native";
+import { Them1Colors } from "../../Colors/Colors1";
+
 
 export const HomeStyle1 = StyleSheet.create({
   miniHeader: {
@@ -7,7 +9,9 @@ export const HomeStyle1 = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     gap: 5,
+    
   },
+ 
   searchBox: {
     width: '88%',
     padding: 5,
@@ -18,7 +22,8 @@ export const HomeStyle1 = StyleSheet.create({
   scanIcon: {
     width: '10%',
     justifyContent: 'center',
-    alignItems: "center"
+    alignItems: "center",
+    color:Them1Colors.primaryColor,
   },
   promoBanners: {
     height: 170,
@@ -43,9 +48,9 @@ export const HomeStyle1 = StyleSheet.create({
     width: 15,
     borderRadius: 7.5,
     margin: 5,
-    borderColor: '#111',
+    borderColor: Them1Colors.seconndaryColor,
     borderWidth: 1,
-    opacity: 0.6
+    
   },
 
   // Home Sale Products style
@@ -55,8 +60,9 @@ export const HomeStyle1 = StyleSheet.create({
     padding: 10,
   },
   mdHeading: {
-    fontSize: 22,
-    fontWeight: "bold",
+    fontSize: 27,
+   
+    fontFamily:'Roboto-BoldItalic',
   },
   minHeading: {
     fontSize: 14,
@@ -118,10 +124,14 @@ export const HomeStyle1 = StyleSheet.create({
   itemPrice:{
     fontWeight:'bold',
     fontSize:23,
+    color:Them1Colors.primaryColor,
   },
   addcart:{
 
-
+     backgroundColor:Them1Colors.primaryColor,
+     padding:5,
+     paddingLeft:10,
+     paddingRight:10,
         
       },
   //  categoriesContainer

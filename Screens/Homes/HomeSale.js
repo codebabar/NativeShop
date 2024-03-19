@@ -1,7 +1,8 @@
 import React from 'react';
-import { FlatList, Pressable, View, Text, Image ,ScrollView} from 'react-native';
+import { FlatList, Pressable, View, Text, Image ,ScrollView,TouchableOpacity} from 'react-native';
 import { HomeStyle1 } from '../../Themes/Styles/Homes/HomeStyle1';
 import { MaterialCommunityIcons, AntDesign  } from '@expo/vector-icons';
+import { Them1Colors } from '../../Themes/Colors/Colors1';
 
 export default function HomeSale() {
   const data = [
@@ -42,12 +43,15 @@ export default function HomeSale() {
          <View style={HomeStyle1.salebadge}><Text style={{fontSize:12,fontWeight:'bold'}}>40% OFF</Text></View>
       <Image source={item.pImage} style={HomeStyle1.itemImage} />
       <Text style={HomeStyle1.itemName}>{item.pname}</Text>
-      <Text style={{marginBottom:15}}>⭐4.5(120)</Text>
+      <Text style={{marginBottom:15,fontWeight:'bold',fontSize:16,}}>⭐4.5
+       <Text style={{fontWeight:'200',fontSize:10}}> (120)</Text></Text>
 
       <View style={{flexDirection:'row',justifyContent:"space-between",alignItems:"center"}}>
           <Text style={HomeStyle1.itemPrice}>${item.pPrice}</Text>
           
-          <Pressable><Text style={{backgroundColor:'green',color:"#fff",padding:5}}>add to cart</Text></Pressable>
+          <TouchableOpacity style={HomeStyle1.addcart}>
+            <Text style={{color:'#fff'}}>add to cart</Text>
+            </TouchableOpacity>
 
       </View>
     </View>
@@ -61,14 +65,15 @@ export default function HomeSale() {
         </View>
         <View>
           <Pressable>
-            <Text style={HomeStyle1.minHeading}>View All</Text>
+            <Text style={{color:Them1Colors.primaryColor}}>View All</Text>
           </Pressable>
         </View>
       </View>
 
       <ScrollView horizontal={true}  showsVerticalScrollIndicator={false} // Hide vertical scrollbar
       showsHorizontalScrollIndicator={false}>
-        <FlatList  horizontal={true} data={data} renderItem={RenderItem} keyExtractor={(item) => item.id.toString()} />
+        <FlatList  horizontal={true} data={data} renderItem={RenderItem} 
+        keyExtractor={(item) => item.id.toString()} />
       </ScrollView>
     </>
   );

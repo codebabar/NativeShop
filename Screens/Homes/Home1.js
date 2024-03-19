@@ -3,6 +3,7 @@ import { TextInput, View, Text,Image, ScrollView, ImageBackground, Pressable, St
 import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { HomeStyle1 } from '../../Themes/Styles/Homes/HomeStyle1';
 import HomeSale from './HomeSale';
+import { Them1Colors } from '../../Themes/Colors/Colors1';
 
 
 export default function Home1() {
@@ -14,7 +15,7 @@ export default function Home1() {
         <View>
             <View style={HomeStyle1.miniHeader}>
                 <View style={HomeStyle1.searchBox}>
-                    <Feather name="search" size={24} color="black" />
+                   
                     <TextInput
                         placeholder='Search Items ...'
                         placeholderTextColor='gray'
@@ -161,7 +162,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     activeDot: {
-        backgroundColor: 'red', // Change this to your desired active dot color
+        backgroundColor: Them1Colors.primaryColor, // Change this to your desired active dot color
     },
 });
 
