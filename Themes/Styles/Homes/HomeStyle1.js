@@ -18,6 +18,7 @@ export const HomeStyle1 = StyleSheet.create({
     backgroundColor: '#f1f2f4',
     flexDirection: 'row',
     borderRadius: 5,
+    borderWidth:1
   },
   scanIcon: {
     width: '10%',
@@ -75,7 +76,7 @@ export const HomeStyle1 = StyleSheet.create({
     position:'relative',
     boxShadow: '0px 3px 8px rgba(0, 0, 0, 0.24)',
     paddingTop:30,
-    paddingBottom:30,
+    paddingBottom:10,
     marginBottom:40,
     paddingLeft:15,
     borderWidth:1,

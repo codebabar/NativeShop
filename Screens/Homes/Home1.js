@@ -4,14 +4,14 @@ import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { HomeStyle1 } from '../../Themes/Styles/Homes/HomeStyle1';
 import HomeSale from './HomeSale';
 import { Them1Colors } from '../../Themes/Colors/Colors1';
-
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 export default function Home1() {
     
     const [isFocused, setIsFocused] = useState(false);
 
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor:'#fff'}}>
         <View>
             <View style={HomeStyle1.miniHeader}>
                 <View style={HomeStyle1.searchBox}>
@@ -28,7 +28,7 @@ export default function Home1() {
                     />
                 </View>
                 <View style={HomeStyle1.scanIcon}>
-                  <Text>H</Text>
+                <FontAwesome5 name='qrcode' size={24} color='black' />
                 </View>
             </View>
 
